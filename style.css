@@ -2,8 +2,80 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(22, 22, 22);
 }
 
 body {
     background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+.title {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 7vh;
+    letter-spacing: 2px;
+}
+
+.feedback__item {
+    margin-top: 40px;
+    position: relative;
+}
+
+.feedback__label {
+    opacity: 0.7;
+    font-size: 1.1em;
+    position: absolute;
+    transition: ease all 0.3s;
+    top: 10px;
+    left: 50px;
+}
+
+.feedback__icon {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    box-sizing: content-box;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback__icon img {
+    max-width: 22px;
+}
+
+.feedback__input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    padding: 10px 15px 10px 50px;
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: ease 0.3s;
+}
+
+.feedback__input:focus {
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+.feedback__input:focus + .feedback__label, 
+.feedback__input:valid + .feedback__label {
+    opacity: 1;
+    font-size: 0.8em;
+    top: -20px;
+    left: 19px;
 }

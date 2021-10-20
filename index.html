@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>feedback</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="title">Обратная связь</div>
+      <form action="#" class="feedback">
+        <div class="feedback__item">
+          <div class="feedback__icon"><img src="img/name.svg" alt="" /></div>
+          <input class="feedback__input" type="text" required />
+          <span class="feedback__label"> Введите имя </span>
+        </div>
+        <div class="feedback__item">
+          <div class="feedback__icon"><img src="img/email.svg" alt="" /></div>
+          <input class="feedback__input" type="email" required />
+          <span class="feedback__label"> Введите e-mail </span>
+        </div>
+        <div class="feedback__item">
+            <div class="feedback__icon"><img src="img/telephone.svg" alt="" /></div>
+            <input class="feedback__input" type="tel" required />
+            <span class="feedback__label"> Введите номер телефона </span>
+          </div>
+      </form>
+    </section>
+  </body>
 </html>
