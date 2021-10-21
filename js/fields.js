@@ -10,12 +10,18 @@ export function correctFileds() {
 }
 
 function focusField(event) {
-    event.currentTarget.classList.add('active');
+    const target = event.currentTarget;
+    const icon = target.parentNode.querySelector('.feedback__icon');
+
+    icon.classList.add('active');
+    target.classList.add('active');
 }
 
 function focusoutField(event) {
     const target = event.currentTarget;
+    const icon = target.parentNode.querySelector('.feedback__icon');
 
+    icon.classList.remove('active');
     if (!target.value) {
         target.classList.remove('active');
     }

@@ -3,29 +3,38 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    color: rgb(22, 22, 22);
+    color: rgb(102, 102, 102);
 }
 
 body {
-    background-color: #f0f0f0;
+    background: rgb(88,9,121);
+    background: linear-gradient(90deg, rgba(88,9,121,1) 0%, rgba(72,0,255,1) 100%);
 }
 
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 10vh;
+    max-width: 450px;
+    margin: 10vh auto;
+    background-color: rgb(250, 250, 250);
+    padding: 50px 30px;
+    box-sizing: content-box;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .title {
     font-size: 2em;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 7vh;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    border-bottom: 2px solid rgb(43, 96, 243);
+    display: inline-block;
     letter-spacing: 2px;
 }
 
 .feedback__item {
-    margin-top: 40px;
+    margin-top: 60px;
     position: relative;
 }
 
@@ -34,48 +43,51 @@ body {
     font-size: 1.1em;
     position: absolute;
     transition: ease all 0.3s;
-    top: 10px;
-    left: 50px;
-    pointer-events: none
+    top: 3px;
+    left: 2px;
+    pointer-events: none;
 }
 
 .feedback__icon {
     width: 42px;
     height: 42px;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
-    box-sizing: content-box;
-    border-radius: 50%;
+    top: -10px;
+    right: -5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
 }
 
-.feedback__icon img {
+.feedback__icon svg {
     max-width: 22px;
+    fill: rgb(102, 102, 102);
+    transition: ease 0.3s;
 }
+
+.feedback__icon.active svg {
+    fill: rgb(43, 96, 243);
+} 
 
 .feedback__input {
     border: none;
     outline: none;
     background-color: transparent;
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
-    padding: 10px 15px 10px 50px;
+    border-bottom: 1px solid rgb(102, 102, 102);
+    padding: 2px 35px 2px 2px;
     width: 100%;
     font-size: 1.2em;
-    border-radius: 25px;
     transition: ease 0.3s;
 }
 
 .feedback__input:focus {
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgb(43, 96, 243);
 }
 
 .feedback__input.active + .feedback__label {
     opacity: 1;
     font-size: 0.8em;
-    top: -20px;
-    left: 19px;
+    top: -15px;
+    left: 2px;
 }
