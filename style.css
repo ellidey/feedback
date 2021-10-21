@@ -30,11 +30,27 @@ body {
     color: rgb(59, 59, 59);
     border-bottom: 2px solid rgb(43, 96, 243);
     display: inline-block;
+    margin-bottom: 60px;
     letter-spacing: 2px;
 }
 
+.btn {
+    border: none;
+    background-color: rgb(43, 96, 243);
+    opacity: 0.9;
+    transition: opacity ease 0.3s;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
 .feedback__item {
-    margin-top: 60px;
+    margin-bottom: 60px;
     position: relative;
 }
 
