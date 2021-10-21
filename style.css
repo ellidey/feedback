@@ -36,6 +36,7 @@ body {
     transition: ease all 0.3s;
     top: 10px;
     left: 50px;
+    pointer-events: none
 }
 
 .feedback__icon {
@@ -72,8 +73,7 @@ body {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 
-.feedback__input:focus + .feedback__label, 
-.feedback__input:valid + .feedback__label {
+.feedback__input.active + .feedback__label {
     opacity: 1;
     font-size: 0.8em;
     top: -20px;
