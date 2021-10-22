@@ -3,12 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    color: rgb(102, 102, 102);
 }
 
 body {
     background: rgb(88,9,121);
     background: linear-gradient(90deg, rgba(88,9,121,1) 0%, rgba(72,0,255,1) 100%);
+    color: rgb(102, 102, 102);
 }
 
 .container {
@@ -94,6 +94,7 @@ body {
     padding: 2px 35px 2px 2px;
     width: 100%;
     font-size: 1.2em;
+    color: rgb(102, 102, 102);
     transition: ease 0.3s;
 }
 
@@ -101,9 +102,87 @@ body {
     border-bottom: 1px solid rgb(43, 96, 243);
 }
 
-.feedback__input.active + .feedback__label {
+.feedback__input.active + .feedback__label,
+.feedback__dp-button.active + .feedback__label {
     opacity: 1;
     font-size: 0.8em;
     top: -15px;
     left: 2px;
+}
+
+.feedback__dp-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(102, 102, 102);
+    width: 100%;
+    height: 28px;
+    cursor: text;
+    color: rgb(102, 102, 102);
+    text-align: left;
+    font-size: 1.2em;
+    transition: ease 0.3s;
+}
+
+.datepicker {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0.1);
+    width: 100%;
+    top: 25px;
+    z-index: 10;
+    display: none;
+}
+
+.datepicker.active {
+    display: block;
+}
+
+.datepicker__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(43, 96, 243);
+    color: #fff;
+}
+
+.datepicker__prev, .datepicker__next {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    cursor: pointer;
+    transition: ease 0.1s;
+    border-radius: 50%;
+}
+
+.datepicker__prev:hover, .datepicker__next:hover {
+    background-color: #fff;
+    color: rgb(102, 102, 102);
+}
+
+.datepicker__current-month {
+    font-size: 0.8em;
+}
+
+.datepicker__days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.datapicker__day {
+    width: 30px;
+    height: 30px;
+    transition: ease 0.1s;
+    background-color: rgb(224, 224, 224);
+    border-radius: 50%;
+    line-height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.datapicker__day:hover, .datapicker__day.active {
+    background-color: rgb(43, 96, 243);
+    color: #fff;
 }
