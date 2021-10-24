@@ -2,7 +2,9 @@ const datePicker = document.querySelector('.datepicker');
 const datePickerBtnOpen = document.querySelector('.datepicker-open');
 const datePickerPrev = document.querySelector('.datepicker__prev');
 const datePickerNext = document.querySelector('.datepicker__next');
-const datePickerCurrentYear = document.querySelector('.datepicker__current-year');
+const datePickerCurrentYearPrev = document.querySelector('.datepicker__current-year-prev');
+const datePickerCurrentYear = document.querySelector('.datepicker__current-year-content');
+const datePickerCurrentYearNext = document.querySelector('.datepicker__current-year-next');
 const datePickerCurrentMonth = document.querySelector('.datepicker__current-month');
 const datePickerDays = document.querySelector('.datepicker__days');
 
@@ -21,6 +23,8 @@ export function initDatePicker() {
     document.addEventListener('click', clickDocument)
     datePickerNext.addEventListener('click', clickNext);
     datePickerPrev.addEventListener('click', clickPrev);
+    datePickerCurrentYearPrev.addEventListener('click', clickPrevYear);
+    datePickerCurrentYearNext.addEventListener('click', clickNextYear);
 
     datePickerCurrentMonth.innerHTML = months[currentDate.month];
     datePickerCurrentYear.innerHTML = currentDate.year;
@@ -37,11 +41,15 @@ function clickDocument(event) {
     if(target != datePicker 
         && !datePicker.contains(target) 
         && target != datePickerBtnOpen) {
-        datePicker.classList.remove('active');
+        closeDataPicker();
+    }
+}
 
-        if (!datePickerBtnOpen.innerHTML) {
-            datePickerBtnOpen.classList.remove('active');
-        }
+function closeDataPicker() {
+    datePicker.classList.remove('active');
+
+    if (!datePickerBtnOpen.innerHTML) {
+        datePickerBtnOpen.classList.remove('active');
     }
 }
 
@@ -68,6 +76,16 @@ function clickPrev(event) {
 
     datePickerCurrentMonth.innerHTML = months[month];
     currentDate.month = month;
+    updateNumberDays();
+}
+
+function clickPrevYear(event) {
+    prevYear();
+    updateNumberDays();
+}
+
+function clickNextYear(event) {
+    nextYear();
     updateNumberDays();
 }
 
@@ -118,4 +136,5 @@ function clickDay(event) {
     month = month > 9 ? month : '0' + month;
     let result = `${day}.${month}.${currentDate.year}`;
     datePickerBtnOpen.innerHTML = result;
+    closeDataPicker();
 }

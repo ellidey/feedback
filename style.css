@@ -161,6 +161,18 @@ body {
     color: rgb(102, 102, 102);
 }
 
+.datepicker__current-year {
+    display: flex;
+}
+
+.datepicker__current-year-content {
+    margin: 0 10px;
+}
+
+.datepicker__current-year-prev, .datepicker__current-year-next {
+    cursor: pointer;
+}
+
 .datepicker__current-month {
     font-size: 0.8em;
 }
