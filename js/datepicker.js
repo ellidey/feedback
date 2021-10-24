@@ -1,3 +1,5 @@
+"use strict";
+
 const datePicker = document.querySelector('.datepicker');
 const datePickerBtnOpen = document.querySelector('.datepicker-open');
 const datePickerPrev = document.querySelector('.datepicker__prev');

@@ -242,3 +242,16 @@ body {
 .feedback__textarea:focus + .feedback__label {
     opacity: 1;
 }
+
+.feedback__message {
+    margin-top: 5px;
+    height: 10px;
+}
+
+.feedback__message.success {
+    color: rgb(50, 158, 50);
+}
+
+.feedback__message.error {
+    color: rgb(238, 70, 70);
+}
