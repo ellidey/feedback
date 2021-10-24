@@ -12,13 +12,11 @@ body {
 }
 
 .container {
-    max-width: 450px;
-    margin: 10vh auto;
-    background-color: rgb(250, 250, 250);
-    padding: 50px 30px;
-    box-sizing: content-box;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
@@ -47,6 +45,15 @@ body {
 
 .btn:hover {
     opacity: 1;
+}
+
+.feedback {
+    min-width: 450px;
+    background-color: rgb(250, 250, 250);
+    padding: 50px 30px;
+    box-sizing: content-box;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .feedback__item {
@@ -197,4 +204,18 @@ body {
 .datapicker__day:hover, .datapicker__day.active {
     background-color: rgb(43, 96, 243);
     color: #fff;
+}
+
+.feedback__textarea {
+    min-height: 100px;
+    font-size: 0.9em;
+    resize: vertical;
+}
+
+.feedback__textarea + .feedback__label {
+    top: -20px;
+}
+
+.feedback__textarea:focus + .feedback__label {
+    opacity: 1;
 }
