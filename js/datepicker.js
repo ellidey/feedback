@@ -19,7 +19,7 @@ const currentDate = {
 }
 
 export function initDatePicker() {
-    datePickerBtnOpen.addEventListener('click', clickBtnOpen);
+    datePickerBtnOpen.addEventListener('focus', clickBtnOpen);
     document.addEventListener('click', clickDocument)
     datePickerNext.addEventListener('click', clickNext);
     datePickerPrev.addEventListener('click', clickPrev);
