@@ -48,7 +48,7 @@ body {
 }
 
 .feedback {
-    min-width: 450px;
+    width: 450px;
     background-color: rgb(250, 250, 250);
     padding: 50px 30px;
     box-sizing: content-box;
@@ -57,7 +57,7 @@ body {
 }
 
 .feedback__item {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     position: relative;
 }
 
@@ -69,6 +69,18 @@ body {
     top: 3px;
     left: 2px;
     pointer-events: none;
+}
+
+.feedback__error {
+    color: rgb(238, 70, 70);
+    display: block;
+    height: 0.8em;
+    font-size: 0.8em;
+    visibility: hidden;
+}
+
+.error .feedback__error {
+    visibility: visible;
 }
 
 .feedback__icon {
@@ -90,7 +102,7 @@ body {
 }
 
 .feedback__icon.active svg {
-    fill: rgb(43, 96, 243);
+    fill: rgb(43, 96, 243) !important;
 } 
 
 .feedback__input {
@@ -105,6 +117,19 @@ body {
     transition: ease 0.3s;
 }
 
+.error .feedback__input {
+    border-bottom: 1px solid rgb(238, 70, 70);
+}
+
+.error .feedback__label {
+    color: rgb(238, 70, 70);
+}
+
+.error .feedback__icon svg {
+    fill: rgb(238, 70, 70);
+}
+
+
 .feedback__input:focus {
     border-bottom: 1px solid rgb(43, 96, 243);
 }
@@ -112,6 +137,7 @@ body {
 .feedback__input.active + .feedback__label,
 .feedback__dp-button.active + .feedback__label {
     opacity: 1;
+    color: rgb(102, 102, 102);
     font-size: 0.8em;
     top: -15px;
     left: 2px;
@@ -207,13 +233,10 @@ body {
 }
 
 .feedback__textarea {
+    padding-top: 25px;
     min-height: 100px;
     font-size: 0.9em;
     resize: vertical;
-}
-
-.feedback__textarea + .feedback__label {
-    top: -20px;
 }
 
 .feedback__textarea:focus + .feedback__label {

@@ -44,8 +44,9 @@
               </g>
             </svg>
           </div>
-          <input class="feedback__input" type="text" />
+          <input class="feedback__input" id="name" type="text" />
           <span class="feedback__label"> Введите имя </span>
+          <span class="feedback__error"></span>
         </div>
         <div class="feedback__item">
           <div class="feedback__icon">
@@ -61,8 +62,9 @@
               />
             </svg>
           </div>
-          <input class="feedback__input" type="email" />
+          <input class="feedback__input" id="email" type="email" />
           <span class="feedback__label"> Введите e-mail </span>
+          <span class="feedback__error"></span>
         </div>
         <div class="feedback__item">
           <div class="feedback__icon">
@@ -93,11 +95,13 @@
           </div>
           <input class="feedback__input" id="telephone" type="tel" />
           <span class="feedback__label"> Введите номер телефона </span>
+          <span class="feedback__error"></span>
         </div>
         <div class="feedback__item">
           <div class="feedback__datepicker">
-            <button class="feedback__dp-button datepicker-open"></button>
+            <button id="date" class="feedback__dp-button datepicker-open"></button>
             <span class="feedback__label"> Введите дату рождения </span>
+            <span class="feedback__error"></span>
 
             <div class="datepicker">
               <div class="datepicker__head">
@@ -117,11 +121,12 @@
           </div>
         </div>
         <div class="feedback__item">
-          <textarea class="feedback__input feedback__textarea"></textarea>
+          <textarea id="question" class="feedback__input feedback__textarea"></textarea>
           <span class="feedback__label"> Введите вопрос </span>
+          <span class="feedback__error"></span>
         </div>
 
-        <button type="button" class="btn">Отправить</button>
+        <button type="button" id="sendform" class="btn">Отправить</button>
       </form>
     </section>
     <script type="module" src="js/index.js"></script>
